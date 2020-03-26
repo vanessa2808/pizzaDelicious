@@ -12,10 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('page.home');
+});
+Route::get('/about', function () {
+    return view('page.about');
+});
+Route::get('/service', function () {
+    return view('page.service');
+});
+Route::get('/blog', function () {
+    return view('page.blog');
+});
+Route::get('/contact', function () {
+    return view('page.contact');
+});
+Route::get('/menu', function () {
+    return view('page.pizza');
 });
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
