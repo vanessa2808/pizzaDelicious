@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasswordResetsTable extends Migration
+class CreateHeaderServiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('password_resets')) {
+        if (!Schema::hasTable('headerService')) {
 
-            Schema::create('password_resets', function (Blueprint $table) {
-                $table->string('email')->index();
-                $table->string('token');
-                $table->timestamp('created_at')->nullable();
+            Schema::create('headerService', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('title');
+                $table->string('image');
+                $table->timestamps();
             });
         }
     }
-
     /**
      * Reverse the migrations.
      *
@@ -30,6 +30,6 @@ class CreatePasswordResetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists('headerService');
     }
 }
