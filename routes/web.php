@@ -29,10 +29,14 @@ Route::get('/contact', function () {
 Route::get('/menu', function () {
     return view('page.pizza');
 });
-
+Route::get('/admin/users/add_users', function () {
+    return view('admin.users.add_users');
+});
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 Auth::routes();
 

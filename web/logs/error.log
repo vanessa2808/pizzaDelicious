@@ -2309,3 +2309,13 @@
 [Wed Mar 25 11:34:35.164095 2020] [core:notice] [pid 50] AH00094: Command line: '/usr/sbin/apache2'
 [Thu Mar 26 07:51:40.401214 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Thu Mar 26 07:51:40.402280 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Mar 26 11:44:16.219125 2020] [autoindex:error] [pid 49] [client 172.18.0.1:41590] AH01276: Cannot serve directory /var/www/html/public/admin/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+[Sat Mar 28 01:49:04.865041 2020] [core:warn] [pid 37] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Mar 28 01:49:04.869280 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sat Mar 28 01:49:04.869613 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Mar 28 13:28:25.550488 2020] [core:warn] [pid 37] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Mar 28 13:28:25.563416 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sat Mar 28 13:28:25.564004 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Mar 29 06:01:07.832335 2020] [core:warn] [pid 36] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Mar 29 06:01:07.841130 2020] [mpm_prefork:notice] [pid 36] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sun Mar 29 06:01:07.841554 2020] [core:notice] [pid 36] AH00094: Command line: '/usr/sbin/apache2'
