@@ -164,7 +164,7 @@
                             <li class="nav-item">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                     <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                    <span class="admin-name">Advanda Cro</span>
+                                    <span class="admin-name">{{Auth::User()->name}}</span>
                                     <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">

@@ -28,70 +28,23 @@
         </div>
         <div class="container-wrap">
             <div class="row no-gutters d-flex">
+                    @foreach($pizza as $key => $pizza)
+            
                 <div class="col-lg-4 d-flex ftco-animate">
                     <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url(page/images/pizza-1.jpg);"></a>
+                        <a href="#" class="img" style="background-image: url({{asset($pizza->image)}});"></a>
                         <div class="text p-4">
-                            <h3>Italian Pizza</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
+                            <h3><a href="#">{{$pizza->name}}</a></h3>
+                            <p>{{$pizza->description}} </p>
+                            <p class="price"><span>${{$pizza->price}}</span> <a href="/pizzaDetails/{{$pizza->id}}" class="ml-2 btn btn-white btn-outline-white">Details</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url(page/images/pizza-2.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>Greek Pizza</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url(page/images/pizza-3.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>Caucasian Pizza</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-lg-last" style="background-image: url(page/images/pizza-4.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>American Pizza</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-lg-last" style="background-image: url(page/images/pizza-5.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>Tomatoe Pie</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-lg-last" style="background-image: url(page/images/pizza-6.jpg);"></a>
-                        <div class="text p-4">
-                            <h3>Margherita</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                            <p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-                        </div>
-                    </div>
-                </div>
+                                            @endforeach
+                  
             </div>
+            
         </div>
-
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
                 <div class="col-md-7 heading-section text-center ftco-animate">

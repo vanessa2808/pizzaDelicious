@@ -8,17 +8,14 @@
     <title>My admin| @yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="admin/img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
+
+    <link rel="stylesheet" href="admin/css/summernote.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="admin/css/bootstrap.min.css">
-    <!-- Bootstrap CSS
-		============================================ -->
+
     <link rel="stylesheet" href="admin/css/font-awesome.min.css">
     <!-- adminpro icon CSS
 		============================================ -->
@@ -73,7 +70,8 @@
 </div>
 
 
-
+<script src="admin/js/summernote.min.js"></script>
+<script src="admin/js/summernote-active.js"></script>
 
 
 <script src="admin/js/vendor/jquery-1.11.3.min.js"></script>
@@ -98,6 +96,7 @@
 <script src="admin/js/counterup/waypoints.min.js"></script>
 <script src="admin/js/counterup/counterup-active.js"></script>
 <!-- peity JS
+
     ============================================ -->
 <script src="admin/js/peity/jquery.peity.min.js"></script>
 <script src="admin/js/peity/peity-active.js"></script>
@@ -127,6 +126,7 @@
 <script src="admin/js/data-table/bootstrap-table-resizable.js"></script>
 <script src="admin/js/data-table/colResizable-1.5.source.js"></script>
 <script src="admin/js/data-table/bootstrap-table-export.js"></script>
+
 <!-- main JS
     ============================================ -->
 <script src="admin/js/main.js"></script>

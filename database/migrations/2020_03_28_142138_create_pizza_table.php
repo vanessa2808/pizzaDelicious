@@ -20,10 +20,14 @@ class CreatePizzaTable extends Migration
                 $table->string('name');
                 $table->text('description');
                 $table->decimal('price');
-                $table->text('recipe');
+                $table->unsignedBigInteger('recipeTypes_id');
+                $table->foreign('recipeTypes_id')->references('id')->on('recipeTypes')->onDelete('cascade');
+                $table->unsignedBigInteger('recipe_id');
+                $table->foreign('recipe_id')->references('id')->on('recipe')->onDelete('cascade');
                 $table->string('chef');
                 $table->string('time');
                 $table->string('image');
+                $table->integer('status');
 
                 $table->timestamps();
             });

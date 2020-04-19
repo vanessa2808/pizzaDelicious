@@ -2319,3 +2319,61 @@
 [Sun Mar 29 06:01:07.832335 2020] [core:warn] [pid 36] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Sun Mar 29 06:01:07.841130 2020] [mpm_prefork:notice] [pid 36] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Sun Mar 29 06:01:07.841554 2020] [core:notice] [pid 36] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Mar 29 13:50:47.168805 2020] [core:warn] [pid 36] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Mar 29 13:50:47.181873 2020] [mpm_prefork:notice] [pid 36] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sun Mar 29 13:50:47.182386 2020] [core:notice] [pid 36] AH00094: Command line: '/usr/sbin/apache2'
+[Mon Mar 30 02:41:41.051125 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Mon Mar 30 02:41:41.052424 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Mar 31 08:16:41.531580 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Tue Mar 31 08:16:41.532673 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Apr 01 01:59:51.381579 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed Apr 01 01:59:51.383134 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Apr 02 01:52:37.065153 2020] [core:warn] [pid 37] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Apr 02 01:52:37.073255 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 02 01:52:37.073838 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 03 07:31:54.037514 2020] [core:warn] [pid 37] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Apr 03 07:31:54.044881 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri Apr 03 07:31:54.045331 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 03 08:14:37.689960 2020] [core:warn] [pid 38] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Apr 03 08:14:37.696197 2020] [mpm_prefork:notice] [pid 38] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri Apr 03 08:14:37.696663 2020] [core:notice] [pid 38] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Apr 04 02:43:22.721352 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sat Apr 04 02:43:22.722401 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Apr 05 01:44:28.030578 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sun Apr 05 01:44:28.031815 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Mon Apr 06 02:41:26.712771 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Mon Apr 06 02:41:26.713835 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Apr 07 02:34:04.777069 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Tue Apr 07 02:34:04.778092 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Apr 08 06:06:43.543653 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed Apr 08 06:06:43.544900 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Apr 09 03:11:12.188993 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 09 03:11:12.190686 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 10 07:20:50.613785 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri Apr 10 07:20:50.619459 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 10 13:06:02.006015 2020] [php7:error] [pid 133] [client 172.20.0.1:43078] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Fri Apr 10 13:13:46.596969 2020] [php7:error] [pid 226] [client 172.20.0.1:43464] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Fri Apr 10 13:20:26.166775 2020] [php7:error] [pid 133] [client 172.20.0.1:43760] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Fri Apr 10 13:46:45.027372 2020] [php7:error] [pid 41] [client 172.20.0.1:44190] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Fri Apr 10 13:49:40.777582 2020] [php7:error] [pid 310] [client 172.20.0.1:44330] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Fri Apr 10 13:49:46.820770 2020] [php7:error] [pid 134] [client 172.20.0.1:44332] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Sat Apr 11 02:43:03.278347 2020] [php7:error] [pid 133] [client 172.20.0.1:44830] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Sat Apr 11 02:49:48.753933 2020] [php7:error] [pid 223] [client 172.20.0.1:45094] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Sat Apr 11 02:50:42.660203 2020] [php7:error] [pid 40] [client 172.20.0.1:45136] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Sat Apr 11 02:52:16.947714 2020] [php7:error] [pid 223] [client 172.20.0.1:45214] PHP Fatal error:  Cannot use App\\Models\\Pizza as Pizza because the name is already in use in /var/www/html/app/Http/Controllers/Page/FrontEndController.php on line 25, referer: http://webfood.com/menu
+[Sat Apr 11 02:55:19.231458 2020] [php7:error] [pid 1178] [client 172.20.0.1:45354] PHP Fatal error:  Cannot use App\\Models\\Pizza as Pizza because the name is already in use in /var/www/html/app/Http/Controllers/Page/FrontEndController.php on line 25, referer: http://webfood.com/
+[Sat Apr 11 07:56:40.031790 2020] [php7:error] [pid 1638] [client 172.20.0.1:47186] PHP Fatal error:  Class 'App\\Http\\Controllers\\Page\\Controller' not found in /var/www/html/app/Http/Controllers/Page/PizzaController.php on line 10, referer: http://webfood.com/menu
+[Mon Apr 13 02:09:03.303467 2020] [core:warn] [pid 51] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Apr 13 02:09:03.309131 2020] [mpm_prefork:notice] [pid 51] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Mon Apr 13 02:09:03.309420 2020] [core:notice] [pid 51] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Apr 14 09:06:07.254608 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Tue Apr 14 09:06:07.255955 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 17 03:01:22.369236 2020] [core:warn] [pid 37] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Apr 17 03:01:22.373819 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri Apr 17 03:01:22.374184 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Fri Apr 17 11:51:35.784467 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri Apr 17 11:51:35.785615 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Apr 18 00:10:16.119654 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sat Apr 18 00:10:16.120752 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Apr 19 00:46:18.309496 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sun Apr 19 00:46:18.310061 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
