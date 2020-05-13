@@ -13,8 +13,8 @@ class CreateOrderTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('order')) {
-            Schema::create('order', function (Blueprint $table) {
+        if (!Schema::hasTable('orders')) {
+            Schema::create('orders', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('recipient');
                 $table->text('address');
