@@ -2402,3 +2402,5 @@
 [Wed May 06 04:13:08.046933 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
 [Fri May 08 02:13:08.510468 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Fri May 08 02:13:08.514041 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Wed May 13 01:44:48.075616 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed May 13 01:44:48.077318 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'

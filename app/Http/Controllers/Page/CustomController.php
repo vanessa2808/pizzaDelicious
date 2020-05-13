@@ -27,12 +27,12 @@ class CustomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(Ingredients $_recipes = null, IngredientTypes $_recipeTypes = null, User $_users, CustomPizza $_custom)
+    public function __construct(Ingredients $_ingredients = null, IngredientTypes $_ingredientTypes = null, User $_users, CustomPizza $_custom)
     {
         $this->users= $_users;
 
-        $this->recipes= $_recipes;
-        $this->recipeTypes= $_recipeTypes;
+        $this->ingredients= $_ingredients;
+        $this->ingredientTypes= $_ingredientTypes;
         $this->custom= $_custom;
 
 
@@ -49,14 +49,14 @@ class CustomController extends Controller
     public function getAddCustom()
     {
         $listUsers = $this->users->getAllUsers();
-        $listRecipeTypes = $this->recipeTypes->getAllRecipeTypes();
+        $listIngredientTypes = $this->ingredientTypes->getAllIngredientTypes();
 
-        $listRecipe = $this->recipes->getAllRecipe();
+        $listIngredients = $this->ingredients->getAllIngredients();
         return view('page.customPizza',[
             'listUsers' => $listUsers,
 
-                'listRecipeTypes' => $listRecipeTypes,
-                'listRecipe' => $listRecipe,
+                'listIngredientTypes' => $listIngredientTypes,
+                'listIngredients' => $listIngredients,
             ]
 
 

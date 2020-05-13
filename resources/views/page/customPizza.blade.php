@@ -98,8 +98,8 @@
                                         <label for="exampleProductsType1">Pizza Types</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose Types of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->types }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->types }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -108,8 +108,8 @@
                                         <label for="exampleProductsType1">Pizza ingredients 1</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->ingredients }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -119,8 +119,8 @@
                                         <label for="exampleProductsType1"> name of recipe 1</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipe as $key => $recipe)
-                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
+                                            @foreach($listIngredients as $key => $ingredients)
+                                                <option value="{{ $ingredients->id }}">{{ $ingredients->nameOfRecipes }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -130,8 +130,8 @@
                                         <label for="exampleProductsType1">Pizza ingredients 2</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->ingredients }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -140,8 +140,8 @@
                                         <label for="exampleProductsType1"> name of recipe 2</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipe as $key => $recipe)
-                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
+                                            @foreach($listIngredients as $key => $ingredients)
+                                                <option value="{{ $ingredients->id }}">{{ $ingredients->nameOfRecipes }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -151,8 +151,8 @@
                                         <label for="exampleProductsType1">Pizza ingredients 3</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->ingredients }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -162,8 +162,8 @@
                                         <label for="exampleProductsType1"> name of recipe 3</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipe as $key => $recipe)
-                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
+                                            @foreach($listIngredients as $key => $ingredients)
+                                                <option value="{{ $ingredients->id }}">{{ $ingredients->nameOfRecipes }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -175,8 +175,8 @@
                                         <label for="exampleProductsType1">Pizza ingredients 4</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->ingredients }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -184,8 +184,8 @@
                                         <label for="exampleProductsType1"> name of recipe 4</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipe as $key => $recipe)
-                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
+                                            @foreach($listIngredients as $key => $ingredients)
+                                                <option value="{{ $ingredients->id }}">{{ $ingredients->nameOfRecipes }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -197,8 +197,8 @@
                                         <label for="exampleProductsType1">Pizza ingredients 5</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeTypeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
+                                            @foreach($listIngredientTypes as $key => $ingredientTypes)
+                                                <option value="{{ $ingredientTypes->id }}">{{ $ingredientTypes->ingredients }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -207,8 +207,8 @@
                                         <label for="exampleProductsType1"> name of recipe 5</label>
                                         <select class="form-control" id="recipeTypeId" name="recipeId">
                                             <option value="0">--Choose ingredients of pizza--</option>
-                                            @foreach($listRecipe as $key => $recipe)
-                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
+                                            @foreach($listIngredients as $key => $ingredients)
+                                                <option value="{{ $ingredients->id }}">{{ $ingredients->nameOfRecipes }}</option>
                                             @endforeach
                                         </select>
                                     </div>
