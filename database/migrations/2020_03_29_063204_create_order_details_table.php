@@ -19,8 +19,8 @@ class CreateOrderDetailsTable extends Migration
                 $table->bigIncrements('id');
                 $table->decimal('price');
                 $table->integer('quantity');
-                $table->unsignedBigInteger('product_details_id');
-                $table->foreign('product_details_id')->references('id')->on('product_details')->onDelete('cascade');
+                $table->unsignedBigInteger('pizza_id');
+                $table->foreign('pizza_id')->references('id')->on('pizza')->onDelete('cascade');
                 $table->unsignedBigInteger('order_id');
                 $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
                 $table->timestamps();
