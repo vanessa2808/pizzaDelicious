@@ -39,7 +39,7 @@
     &:not(:first-child) { @include border-left-radius(0); }
   }
 
-  // Custom file inputs have more complex markup, thus requiring different
+  // CustomPizza file inputs have more complex markup, thus requiring different
   // border-radius overrides.
   > .custom-file {
     display: flex;

@@ -21,38 +21,39 @@ Route::get('/blog', function () {
 Route::get('/contact', function () {
     return view('page.contact');
 });
+Route::get('/cart', function () {
+    return view('page.addToCart');
+});
+Route::get('/confirm', function () {
+    return view('page.confirm');
+});
 Route::get('/menu','Page\FrontEndController@getMenuPage' , function () {
     return view('page.pizza');
 });
 
-    Route::get('/pizzaDetails/{id}','Page\FrontEndController@getPizzaDetails', function () {
+    Route::get('/pizzaDetails/{id}','Page\PizzaController@index', function () {
     return view('page.pizza_details');
 });
-Route::get('/custom_pizza',function () {
+
+Route::get('/custom_pizza','Page\CustomController@getAddCustom',function () {
+    return view('page.customPizza');
+});
+Route::post('/custom_pizza','Page\CustomController@postAddCustom',function () {
     return view('page.customPizza');
 });
 
-Route::get('/custom_beefPizza', function () {
-    return view('page.custom_beefPizza');
+Route::group(['prefix' => '/admin/custom'], function () {
+    Route::get('/list_custom', ['as' => 'admin.custom.list_custom', 'uses' => 'Page\CustomController@index']);
+
+
 });
-
-
 
 Route::get('/admin/comments/list_comments', 'CommentController@index')->name('');
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' => 'administrator'], function() {
-    Route::get('/admin', 'HomeController@dashboard')->name('dashboard');
 
-    Route::group(['prefix' => '/admin/product_categories'], function () {
-        Route::get('/add_categories', ['as' => 'admin.product_categories.add_categories', 'uses' => 'CategoryController@getAdd']);
-        Route::post('/add_categories', ['as' => 'admin.product_categories.add_categories', 'uses' => 'CategoryController@postAdd']);
-        Route::get('/list_categories', ['as' => 'admin.product_categories.list_categories', 'uses' => 'CategoryController@index']);
 
-        Route::get('edit_categories/{id}', ['as' => 'admin.product_categories.edit_categories', 'uses' => 'CategoryController@getEdit']);
-        Route::post('edit_categories/{id}', ['as' => 'admin.product_categories.edit_categories', 'uses' => 'CategoryController@postEdit']);
-        Route::get('delete/{id}', ['as' => 'admin.product_categories.delete', 'uses' => 'CategoryController@delete']);
-    });
     Route::group(['prefix' => '/admin/users'], function () {
         Route::get('/add_users', ['as' => 'admin.users.add_users', 'uses' => 'UserController@getAdd']);
         Route::post('/add_users', ['as' => 'admin.users.add_users', 'uses' => 'UserController@postAdd']);
@@ -213,17 +214,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
 
     });
 
-// Main
 
-    Route::group(['prefix' => '/admin/main'], function () {
-        Route::get('/add_main', ['as' => 'admin.main.add_main', 'uses' => 'MainController@getAddMain']);
-        Route::post('/add_main', ['as' => 'admin.main.add_main', 'uses' => 'MainController@postAddMain']);
-        Route::get('/list_main', ['as' => 'admin.main.list_main', 'uses' => 'MainController@index']);
-
-        Route::get('edit_main/{id}', ['as' => 'admin.main.edit_main', 'uses' => 'MainController@getEditMain']);
-        Route::post('edit_main/{id}', ['as' => 'admin.main.edit_main', 'uses' => 'MainController@postEditMain']);
-        Route::get('delete/{id}', ['as' => 'admin.main.delete', 'uses' => 'MainController@delete']);
-    });
 
     Route::group(['prefix' => '/admin/sidebar'], function () {
         Route::get('/add_sidebar', ['as' => 'admin.sidebar.add_sidebar', 'uses' => 'SidebarController@getAddSidebar']);
@@ -295,12 +286,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::post('edit_functionServices/{id}', ['as' => 'admin.services.edit_functionServices', 'uses' => 'FunctionServiceController@postEditFunctionServices']);
         Route::get('delete/{id}', ['as' => 'admin.services.delete', 'uses' => 'FunctionServiceController@delete']);
     });
-    Route::group(['prefix' => '/admin/contactInformation'], function () {
 
-        Route::get('/list_contactInformation', ['as' => 'admin.contactInformation.list_contactInformation', 'uses' => 'ContactInformationController@index']);
-
-        Route::get('delete/{id}', ['as' => 'admin.contactInformation.delete', 'uses' => 'ContactInformationController@delete']);
-    });
     Route::group(['prefix'=>'admin/orders'], function() {
             Route::get('/list_orders', ['as' => 'admin.orders.list_orders', 'uses' =>'OrderController@index']);
             Route::get('/list_orderDetails/{id}', ['as' => 'admin.orders.list_orderDetails', 'uses' =>'OrderController@orderDetails']);
@@ -308,26 +294,53 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
             Route::post('/updateOrders/{id}', ['as' => 'admin.orders.updateOrders', 'uses' =>'OrderController@updateOrders']);
             Route::get('/delete/{id}', ['as' => 'admin.orders.delete', 'uses' =>'OrderController@delete']);
     });
-        Route::group(['prefix' => '/admin/recipes'], function () {
-            Route::get('/add_recipe', ['as' => 'admin.recipes.add_recipe', 'uses' => 'RecipeController@getAddRecipe']);
-            Route::post('/add_recipe', ['as' => 'admin.recipes.add_recipe', 'uses' => 'RecipeController@postAddRecipe']);
-            Route::get('/list_recipe', ['as' => 'admin.recipes.list_recipe', 'uses' => 'RecipeController@index']);
-            Route::get('/list_pizzaRecipes', ['as' => 'admin.recipes.list_pizzaRecipes', 'uses' => 'PizzaRecipeController@index']);
+        Route::group(['prefix' => '/admin/ingredients'], function () {
+            Route::get('/add_ingredients', ['as' => 'admin.ingredients.add_ingredients', 'uses' => 'IngredientController@getAddIngredients']);
+            Route::post('/add_ingredients', ['as' => 'admin.ingredients.add_ingredients', 'uses' => 'IngredientController@postAddIngredients']);
+            Route::get('/list_ingredients', ['as' => 'admin.ingredients.list_ingredients', 'uses' => 'IngredientController@index']);
 
-            Route::get('edit_recipe/{id}', ['as' => 'admin.recipes.edit_recipe', 'uses' => 'RecipeController@getEditRecipe']);
-            Route::post('edit_recipe/{id}', ['as' => 'admin.recipes.edit_recipe', 'uses' => 'RecipeController@postEditRecipe']);
-            Route::get('delete/{id}', ['as' => 'admin.recipes.delete', 'uses' => 'RecipeController@delete']);
+            Route::get('edit_ingredients/{id}', ['as' => 'admin.ingredients.edit_ingredients', 'uses' => 'IngredientController@getEditIngredients']);
+            Route::post('edit_ingredients/{id}', ['as' => 'admin.ingredients.edit_ingredients', 'uses' => 'IngredientController@postEditIngredients']);
+            Route::get('delete/{id}', ['as' => 'admin.ingredients.delete', 'uses' => 'IngredientController@delete']);
         });
 
-    Route::group(['prefix' => '/admin/recipeTypes'], function () {
-        Route::get('/add_recipeTypes', ['as' => 'admin.recipeTypes.add_recipeTypes', 'uses' => 'RecipeTypeController@getAddRecipeTypes']);
-        Route::post('/add_recipeTypes', ['as' => 'admin.recipeTypes.add_recipeTypes', 'uses' => 'RecipeTypeController@postAddRecipeTypes']);
-        Route::get('/list_recipeTypes', ['as' => 'admin.recipeTypes.list_recipeTypes', 'uses' => 'RecipeTypeController@index']);
+    Route::group(['prefix' => '/admin/ingredientTypes'], function () {
+        Route::get('/add_ingredientTypes', ['as' => 'admin.ingredientTypes.add_ingredientTypes', 'uses' => 'IngredientTypeController@getAddIngredientTypes']);
+        Route::post('/add_ingredientTypes', ['as' => 'admin.ingredientTypes.add_ingredientTypes', 'uses' => 'IngredientTypeController@postAddIngredientTypes']);
+        Route::get('/list_ingredientTypes', ['as' => 'admin.ingredientTypes.list_ingredientTypes', 'uses' => 'IngredientTypeController@index']);
 
-        Route::get('edit_recipeTypes/{id}', ['as' => 'admin.recipeTypes.edit_recipeTypes', 'uses' => 'RecipeTypeController@getEditRecipeTypes']);
-        Route::post('edit_recipeTypes/{id}', ['as' => 'admin.recipeTypes.edit_recipeTypes', 'uses' => 'RecipeTypeController@postEditRecipeTypes']);
-        Route::get('deleteRe/{id}', ['as' => 'admin.recipeTypes.deleteRe', 'uses' => 'RecipeTypeController@deleteRe']);
+        Route::get('edit_ingredientTypes/{id}', ['as' => 'admin.ingredientTypes.edit_ingredientTypes', 'uses' => 'IngredientTypeController@getEditIngredientTypes']);
+        Route::post('edit_ingredientTypes/{id}', ['as' => 'admin.ingredientTypes.edit_ingredientTypes', 'uses' => 'IngredientTypeController@postEditIngredientTypes']);
+        Route::get('deleteIngre/{id}', ['as' => 'admin.ingredientTypes.deleteIngre', 'uses' => 'IngredientTypeController@deleteIngre']);
     });
+    Route::group(['prefix' => '/admin/custom'], function () {
+        Route::get('/list_customPizza', ['as' => 'admin.custom.list_customPizza', 'uses' => 'CustomPizzaController@index']);
+
+        Route::get('edit_customPizza/{id}', ['as' => 'admin.custom.edit_customPizza', 'uses' => 'CustomPizzaController@getEditCustomPizza']);
+        Route::post('edit_customPizza/{id}', ['as' => 'admin.custom.edit_customPizza', 'uses' => 'CustomPizzaController@postEditCustomPizza']);
+        Route::get('delete/{id}', ['as' => 'admin.custom.delete', 'uses' => 'CustomPizzaController@delete']);
+    });
+
+    Route::group(['prefix' => '/admin/custom'], function () {
+        Route::get('/add_customPizzaIngredients', ['as' => 'admin.custom.add_customPizzaIngredients', 'uses' => 'CustomPizzaIngredientController@getAddCustomPizzaIngredients']);
+        Route::post('/add_customPizzaIngredients', ['as' => 'admin.custom.add_customPizzaIngredients', 'uses' => 'CustomPizzaIngredientController@postAddCustomPizzaIngredients']);
+        Route::get('/list_customPizzaIngredients', ['as' => 'admin.custom.list_customPizzaIngredients', 'uses' => 'CustomPizzaIngredientController@index']);
+
+        Route::get('edit_customPizzaIngredients/{id}', ['as' => 'admin.custom.edit_customPizzaIngredients', 'uses' => 'CustomPizzaIngredientController@getEditCustomPizzaIngredients']);
+        Route::post('edit_customPizzaIngredients/{id}', ['as' => 'admin.custom.edit_customPizzaIngredients', 'uses' => 'CustomPizzaIngredientController@postEditCustomPizzaIngredients']);
+        Route::get('deleteCu/{id}', ['as' => 'admin.custom.deleteCu', 'uses' => 'CustomPizzaIngredientController@deleteCu']);
+    });
+    Route::group(['prefix' => '/admin/custom'], function () {
+        Route::get('/add_customPizza', ['as' => 'admin.custom.add_customPizza', 'uses' => 'CustomPizzaController@getAddCustomPizza']);
+        Route::post('/add_customPizza', ['as' => 'admin.custom.add_customPizza', 'uses' => 'CustomPizzaController@postAddCustomPizza']);
+        Route::get('/list_customPizza', ['as' => 'admin.custom.list_customPizza', 'uses' => 'CustomPizzaController@index']);
+
+        Route::get('edit_customPizza/{id}', ['as' => 'admin.custom.edit_customPizza', 'uses' => 'CustomPizzaController@getEditCustomPizza']);
+        Route::post('edit_customPizza/{id}', ['as' => 'admin.custom.edit_customPizza', 'uses' => 'CustomPizzaController@postEditCustomPizza']);
+        Route::get('delete/{id}', ['as' => 'admin.custom.deleteCu', 'uses' => 'CustomPizzaController@deleteCu']);
+    });
+
+
 
 
 

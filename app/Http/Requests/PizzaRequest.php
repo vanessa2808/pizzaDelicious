@@ -31,6 +31,7 @@ class PizzaRequest extends FormRequest
             'time' => 'required',
 
             'image' => 'required',
+            'status' => 'required',
 
 
 
@@ -48,6 +49,7 @@ class PizzaRequest extends FormRequest
             'chef.required' => 'please, enter chef',
             'time.required' => 'please, enter time',
             'image.required' => 'please, enter image',
+            'status.required' => 'please, enter image',
 
 
 

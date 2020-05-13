@@ -100,7 +100,7 @@ class ExceptionHandler implements EventSubscriberInterface
     }
 
     /**
-     * Custom error handler to catch all errors in the debug mode.
+     * CustomPizza error handler to catch all errors in the debug mode.
      *
      * @param int    $errno
      * @param string $errstr

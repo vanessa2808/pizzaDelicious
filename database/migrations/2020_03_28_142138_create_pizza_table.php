@@ -21,7 +21,7 @@ class CreatePizzaTable extends Migration
                 $table->text('description');
                 $table->decimal('price');
                 $table->unsignedBigInteger('recipeTypes_id');
-                $table->foreign('recipeTypes_id')->references('id')->on('recipeTypes')->onDelete('cascade');
+                $table->foreign('recipeTypes_id')->references('id')->on('ingredientTypes')->onDelete('cascade');
                 $table->unsignedBigInteger('recipe_id');
                 $table->foreign('recipe_id')->references('id')->on('recipe')->onDelete('cascade');
                 $table->string('chef');

@@ -52,6 +52,9 @@
                         @endguest
 
                     </li>
+                    <li class="nav-item"><a href="/cart" class="nav-link">Cart</a></li>
+
+
             </ul>
         </div>
     </div>

@@ -81,7 +81,7 @@ class Request
     protected static $httpMethodParameterOverride = false;
 
     /**
-     * Custom parameters.
+     * CustomPizza parameters.
      *
      * @var \Symfony\Component\HttpFoundation\ParameterBag
      */

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Orders;
 use App\Models\Status;
 use App\Models\Transaction;
-use App\Models\ProductDetails;
+use App\Models\pizzaDetails;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -20,7 +20,7 @@ class OrderController extends Controller
 
     public function __construct(Orders $_orders = null, Status $_status = null,
                                 Transaction $_transaction = null,
-                                ProductDetails $_productDetails = null)
+                                pizzaDetails $_productDetails = null)
     {
         $this->middleware('auth');
         $this->orders = $_orders;
@@ -106,11 +106,11 @@ class OrderController extends Controller
                 $idOrder = $this->orders->getOrderById($id);
                 $idOrder->recipient = $request->recipient;
                 $idOrder->address = $request->address;
-                
+
                 $idOrder->phone = $request->phone;
                 $idOrder->payment_type = $request->payment_type;
                 $idOrder->total = $request->total;
-                
+
                 $idOrder->user_id = $request->user_id;
                 $idOrder->status_id = $request->status;
 
@@ -145,15 +145,15 @@ class OrderController extends Controller
             DB::beginTransaction();
             try {
                 $idOrder = $this->orders->getOrderById($id);
-                
+
                 $idOrder->recipient = $request->recipient;
                 $idOrder->address = $request->address;
-                
+
                 $idOrder->phone = $request->phone;
-              
+
                 $idOrder->payment_type = $request->payment_type;
                 $idOrder->total = $request->total;
-                
+
                 if($request->status == 3){
                     $idOrder->status = $request->status;
                     $idTransaction = $this->transaction;

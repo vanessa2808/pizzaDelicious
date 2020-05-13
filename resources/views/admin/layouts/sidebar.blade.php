@@ -137,11 +137,14 @@
                     </div>
                 </li>
 
-                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-files-o"></i> <span class="mini-dn">Custom</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-files-o"></i> <span class="mini-dn">IngredientTypes</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown pages-left-menu-std animated flipInX">
-                        <a href="admin/custom/list_customBeef" class="dropdown-item">Custom beef</a>
-                        <a href="admin/custom/list_customVegetable" class="dropdown-item">Custom Vegetable</a>
-                        <a href="admin/custom/list_customVegetarian" class="dropdown-item">custom Vegetarian</a>
+                        <a href="admin/ingredientTypes/add_ingredientTypes" class="dropdown-item"> Add Ingredient Types</a>
+
+                        <a href="admin/ingredientTypes/list_ingredientTypes" class="dropdown-item"> List Ingredient Types</a>
+                        <a href="admin/ingredients/add_ingredients" class="dropdown-item"> Add Ingredients </a>
+                        <a href="admin/ingredients/list_ingredients" class="dropdown-item"> list Ingredients </a>
+
 
 
 
@@ -150,26 +153,17 @@
                     </div>
                 </li>
                  <li class="nav-item">
-                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Recipe</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">CustomPizza</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                        <a href="admin/recipes/add_recipe" class="dropdown-item">Add_recipe</a>
-                        <a href="admin/recipes/list_recipe" class="dropdown-item">List_recipe</a>
-                        <a href="admin/recipes/list_pizzaRecipes" class="dropdown-item">List_Pizzarecipe</a>
+                        <a href="admin/custom/list_customPizza" class="dropdown-item">list_customPizza</a>
+                        <a href="admin/custom/add_customPizzaIngredients" class="dropdown-item">add_customPizzaIngredients</a>
+                        <a href="admin/custom/list_customPizzaIngredients" class="dropdown-item">list_customPizzaIngredients</a>
 
                     </div>
                 </li>
 
 
-                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-files-o"></i> <span class="mini-dn">Recipe Types</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
-                    <div role="menu" class="dropdown-menu left-menu-dropdown pages-left-menu-std animated flipInX">
-                        <a href="admin/recipeTypes/add_recipeTypes" class="dropdown-item">Add recipeTypes</a>
-                        <a href="admin/recipeTypes/list_recipeTypes" class="dropdown-item">List recipeTypes</a>
 
-
-
-
-                    </div>
-                </li>
 
             </ul>
         </div>

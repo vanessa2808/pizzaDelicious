@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\File\Exception\AccessDeniedException;
  * (if available on the current OS/PHP setup).
  *
  * You can register custom guessers by calling the register() method on the
- * singleton instance. Custom guessers are always called before any default ones.
+ * singleton instance. CustomPizza guessers are always called before any default ones.
  *
  *     $guesser = MimeTypeGuesser::getInstance();
  *     $guesser->register(new MyCustomMimeTypeGuesser());

@@ -96,128 +96,38 @@
                                                         <label>Price</label>
                                                         <input type="text" class="form-control" placeholder="Enter price" name="price" />
                                                     </div>
-
                                                     <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza Types</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose Types of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->types }}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <label for="exampleInputEmail1">Recipe</label>
+                                                        <textarea type="text" class="ckeditor form-control" id="recipe"
+                                                                  placeholder="Enter recipe" name="recipe"></textarea>
+
+                                                        <script type="text/javascript" src="{{asset('/ckeditor/ckeditor.js')}}"></script>
+
+                                                        <script>
+
+                                                            CKEDITOR.replace( 'editor1', {
+                                                                on: {
+                                                                    instanceReady: function( ev ) {
+                                                                        // Output paragraphs as <p>Text</p>.
+                                                                        this.dataProcessor.writer.setRules( 'p', {
+                                                                            indent: false,
+                                                                            breakBeforeOpen: true,
+                                                                            breakAfterOpen: false,
+                                                                            breakBeforeClose: false,
+                                                                            breakAfterClose: true
+                                                                        });
+                                                                    }
+                                                                }
+                                                            } );
+                                                            CKEDITOR.on( 'instanceReady', function( ev ) {
+                                                                // Ends self-closing tags the HTML4 way, like <br>.
+                                                                ev.editor.dataProcessor.writer.selfClosingEnd = '>';
+                                                            });
+                                                        </script>
+                                                        @include('ckfinder::setup')
+
+
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza ingredients 1</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1"> name of recipe 1</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipe as $key => $recipe)
-                                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza ingredients 2</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1"> name of recipe 2</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipe as $key => $recipe)
-                                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza ingredients 3</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1"> name of recipe 3</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipe as $key => $recipe)
-                                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza ingredients 4</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1"> name of recipe 4</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipe as $key => $recipe)
-                                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1">Pizza ingredients 5</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipeTypes as $key => $recipeTypes)
-                                                                <option value="{{ $recipeTypes->id }}">{{ $recipeTypes->ingredients }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="exampleProductsType1"> name of recipe 5</label>
-                                                        <select class="form-control" id="recipeTypeId" name="recipeTypeId">
-                                                            <option value="0">--Choose ingredients of pizza--</option>
-                                                            @foreach($listRecipe as $key => $recipe)
-                                                                <option value="{{ $recipe->id }}">{{ $recipe->nameOfRecipes }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
-
-
                                                     <div class="form-group-inner">
                                                         <label>Chef</label>
                                                         <input type="text" class="form-control" placeholder="Enter chef" name="chef" />
@@ -248,36 +158,35 @@
                         </span>
                                                 @enderror
 
+
+
+
+
+
+
+                                            <div class="login-btn-inner">
+                                                <div class="inline-remember-me">
+                                                    <button class="btn btn-sm btn-primary pull-right login-submit-cs" type="submit">Log In</button>
+                                                    <label>
+                                                        <input type="checkbox" class="i-checks"> Remember me </label>
+                                                </div>
                                             </div>
-
-
-
-
-
-
-                                                    <div class="login-btn-inner">
-                                                        <div class="inline-remember-me">
-                                                            <button class="btn btn-sm btn-primary pull-right login-submit-cs" type="submit">Log In</button>
-                                                            <label>
-                                                                <input type="checkbox" class="i-checks"> Remember me </label>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                            </form>
                                         </div>
-
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
+
+
+
         </div>
     </div>
+</div>
 </div>
 
 

@@ -21,7 +21,7 @@ use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use League\Flysystem\Util\MimeType;
 
 /**
- * Custom adapter for AWS-S3.
+ * CustomPizza adapter for AWS-S3.
  */
 class AwsS3 extends AwsS3Adapter implements ContainerAwareInterface, EmulateRenameDirectoryInterface
 {

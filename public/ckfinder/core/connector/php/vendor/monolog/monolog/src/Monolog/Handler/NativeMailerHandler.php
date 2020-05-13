@@ -84,7 +84,7 @@ class NativeMailerHandler extends MailHandler
     /**
      * Add headers to the message
      *
-     * @param  string|array $headers Custom added headers
+     * @param  string|array $headers CustomPizza added headers
      * @return self
      */
     public function addHeader($headers)
@@ -102,7 +102,7 @@ class NativeMailerHandler extends MailHandler
     /**
      * Add parameters to the message
      *
-     * @param  string|array $parameters Custom added parameters
+     * @param  string|array $parameters CustomPizza added parameters
      * @return self
      */
     public function addParameter($parameters)

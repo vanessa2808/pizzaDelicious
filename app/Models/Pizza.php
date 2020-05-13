@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Pizza extends Model
 {
     protected $table = 'pizza';
-    protected $fillable = ['name','description','price','chef','time','image','status','created_at','updated_at'];
+    protected $fillable = ['name','description','price','recipe','chef','time','image','status','created_at','updated_at'];
     protected const RETURN_NUM_ZERO = 0;
     protected const RETURN_NUM_ONE = 1;
     protected const RETURN_STR_ZERO = "0";
     protected const RETURN_STR_ONE = "1";
 
     public function productDetails() {
-        return $this->hasMany('App\Models\ProductDetails', 'pizza_id', 'id');
+        return $this->hasMany('App\Models\pizzaDetails', 'pizza_id', 'id');
     }
 
 
@@ -34,6 +34,7 @@ class Pizza extends Model
 
         $newPizza->description= $request->description;
         $newPizza->price= $request->price;
+        $newPizza->recipe= $request->recipe;
         $newPizza->chef= $request->chef;
         $newPizza->time= $request->time;
 
@@ -72,8 +73,10 @@ class Pizza extends Model
 
         $idPizza->description= $request->description;
         $idPizza->price= $request->price;
+        $idPizza->recipe= $request->recipe;
         $idPizza->chef= $request->chef;
         $idPizza->time= $request->time;
+        $idPizza->status= $request->status;
 
 
 
@@ -89,7 +92,6 @@ class Pizza extends Model
             $file->move("uploads/pizza", $Hinh);
             $idPizza ->image= "uploads/pizza/".$Hinh;
         }
-        $idPizza->status= $request->status;
 
 
 

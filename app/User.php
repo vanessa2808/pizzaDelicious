@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\pizzaDetails;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -54,6 +55,14 @@ class User extends Authenticatable
     public function getAllUsers() {
         return $this->all();
     }
+    public function posts(){
+               return $this->hasMany(pizzaDetails::class);
+    }
+    public function comments()
+	    {
+	        return $this->hasMany('App\Models\Comment');
+	    }
+
     public function addNewUsers($request) {
         $newUsers = new User();
 

@@ -119,7 +119,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
+    | CustomPizza Validation Language Lines
     |--------------------------------------------------------------------------
     |
     | Here you may specify custom validation messages for attributes using the
@@ -136,7 +136,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Custom Validation Attributes
+    | CustomPizza Validation Attributes
     |--------------------------------------------------------------------------
     |
     | The following language lines are used to swap our attribute placeholder

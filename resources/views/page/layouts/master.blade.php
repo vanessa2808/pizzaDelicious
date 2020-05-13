@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="page/css/flaticon.css">
     <link rel="stylesheet" href="page/css/icomoon.css">
     <link rel="stylesheet" href="page/css/style.css">
+
+
 </head>
 
 <body>
@@ -57,7 +59,6 @@
 <script src="page/js/bootstrap-datepicker.js"></script>
 <script src="page/js/jquery.timepicker.min.js"></script>
 <script src="page/js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="page/js/google-map.js"></script>
 <script src="page/js/main.js"></script>
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ProductDetails;
+use App\Models\pizzaDetails;
 use App\Models\Orders;
 use App\Models\OrderDetail;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -23,7 +23,7 @@ class CartController extends Controller
      */
     public function __construct(Products $_products = null,
                                 Orders $_orders = null,
-                                ProductDetails $_productdetails = null)
+                                pizzaDetails $_productdetails = null)
     {
         $this->middleware('auth');
         $this->products = $_products;

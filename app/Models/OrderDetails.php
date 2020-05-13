@@ -22,6 +22,6 @@ class OrderDetail extends Model
      * @retun mix
      */
     public function productdetail() {
-        return $this->belongsTo('App\Models\ProductDetails', 'product_details_id', 'id');
+        return $this->belongsTo('App\Models\pizzaDetails', 'product_details_id', 'id');
     }
 }

@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers\Page;
 
-use Illuminate\Http\Request;
+
 use App\Models\Pizza;
-use App\Models\ProductDetails;
-use bumbummen99\Shoppingcart\Facades\Cart ;
+use App\Models\PizzaDetails;
+
+
 use App\Http\Controllers\Controller;
 
 class PizzaController extends Controller
 {
     protected $pizza;
-    protected $productDetails;
+    protected $pizzaDetails;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(Pizza $_pizza = null, ProductDetails $_productDetails = null)
+    public function __construct(Pizza $_pizza = null, PizzaDetails $_pizza_details = null)
     {
 
         $this->pizza = $_pizza;
-        $this->productDetails = $_productDetails;
+        $this->pizzaDetails = $_pizza_details;
     }
 
     /**
@@ -29,14 +30,14 @@ class PizzaController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function pizzaDetails($id)
+    public function index($id)
     {
-        $idPizza= $this->pizza->getPizzaDetailById($id);
-        if(empty($idPizza)){
+        $listPizza= $this->pizza->getPizzaById($id);
+        if(empty($listPizza)){
             return redirect()->back();
         }
         return view('page.pizza_details',[
-            'idPizza' => $idPizza
+            'listPizza' => $listPizza
         ]);
     }
 

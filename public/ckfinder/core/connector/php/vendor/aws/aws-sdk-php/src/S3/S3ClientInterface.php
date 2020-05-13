@@ -122,7 +122,7 @@ interface S3ClientInterface extends AwsClientInterface
      *   `UploadPart` operations allowed during a multipart upload.
      * - mup_threshold: (int, default=int(16777216)) The size, in bytes, allowed
      *   before the upload must be sent via a multipart upload. Default: 16 MB.
-     * - params: (array, default=array([])) Custom parameters to use with the
+     * - params: (array, default=array([])) CustomPizza parameters to use with the
      *   upload. For single uploads, they must correspond to those used for the
      *   `PutObject` operation. For multipart uploads, they correspond to the
      *   parameters of the `CreateMultipartUpload` operation.
@@ -183,7 +183,7 @@ interface S3ClientInterface extends AwsClientInterface
      *   function signature like `function (Aws\Command $command) {...}`.
      * - concurrency: (int, default=int(5)) Maximum number of concurrent
      *   `UploadPart` operations allowed during a multipart upload.
-     * - params: (array, default=array([])) Custom parameters to use with the
+     * - params: (array, default=array([])) CustomPizza parameters to use with the
      *   upload. For single uploads, they must correspond to those used for the
      *   `CopyObject` operation. For multipart uploads, they correspond to the
      *   parameters of the `CreateMultipartUpload` operation.

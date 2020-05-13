@@ -1,6 +1,6 @@
 (function ($) {
  "use strict";
- 
+
 			// Mini Notifications active class
 			 $('#miniDefaultAnimation').on('click', function () {
                 Lobibox.notify('default', {
@@ -32,7 +32,7 @@
                     msg: 'Lorem ipsum dolor sit amet hears farmer indemnity inherent.'
                 });
             });
-			
+
 			// large Notifications active class
 			 $('#largeDefaultBasic').on('click', function () {
                 Lobibox.notify('default', {
@@ -64,7 +64,7 @@
                     msg: 'Lorem ipsum dolor sit amet hears farmer indemnity inherent, youngest nestor serene horse, already, ipsum unplanted trace line. Making queries worketh game unplanted trace how erring poles.'
                 });
             });
-			// Notifications Custom Animation active class
+			// Notifications CustomPizza Animation active class
 			$('#basicInfoAnimation').on('click', function () {
                 Lobibox.notify('info', {
                     showClass: 'fadeInDown',
@@ -93,8 +93,8 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
- 
-			// Notifications Custom Width active class
+
+			// Notifications CustomPizza Width active class
 			 $('#basicInfoWidth').on('click', function () {
                 Lobibox.notify('info', {
                     width: 300,
@@ -119,7 +119,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Notifications Position active class
 			$('#basicInfoPosition').on('click', function () {
                 Lobibox.notify('info', {
@@ -145,7 +145,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Notifications No Delay active class
 			$('#basicDefaultNoDelay').on('click', function () {
                 Lobibox.notify('default', {
@@ -182,7 +182,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			// Notifications Custom Delay active class
+			// Notifications CustomPizza Delay active class
 			$('#basicDefaultCustomDelay').on('click', function () {
                 Lobibox.notify('default', {
                     delay: 15000,
@@ -213,7 +213,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Notifications No Icon active class
 			 $('#basicDefaultNoIcon').on('click', function () {
                 Lobibox.notify('default', {
@@ -245,8 +245,8 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
-			// Notifications Custom Title active class
+
+			// Notifications CustomPizza Title active class
 			$('#basicDefaultCustomTitle').on('click', function () {
                 Lobibox.notify('default', {
                     title: 'Info title',
@@ -277,7 +277,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Notifications Image active class
 			$('#basicDefaultImage').on('click', function () {
                 Lobibox.notify('default', {
@@ -309,7 +309,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Basic notifications active class
 			$('#basicDefault').on('click', function () {
                 Lobibox.notify('default', {
@@ -336,7 +336,7 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-			
+
 			// Notifications No Sound active class
 			$('#basicInfoNoSound').on('click', function () {
                 Lobibox.notify('info', {
@@ -362,6 +362,6 @@
                     msg: 'Lorem ipsum dolor sit amet against apennine any created, spend loveliest, building stripes.'
                 });
             });
-            
- 
-})(jQuery); 
+
+
+})(jQuery);

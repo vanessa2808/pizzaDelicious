@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Pizza;
 
-use App\Models\Recipe;
-use App\Models\RecipeType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PizzaRequest;
@@ -14,8 +12,6 @@ use phpDocumentor\Reflection\Types\Self_;
 class PizzaController extends Controller
 {
     protected $pizza;
-    protected $recipeTypes;
-    protected $recipe;
     protected const RETURN_NUM_ZERO = 0;
     protected const RETURN_NUM_ONE = 1;
     protected const RETURN_STR_ZERO ="0";
@@ -25,12 +21,10 @@ class PizzaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(Pizza $_pizza = null, RecipeType $_recipeTypes, Recipe $_recipe)
+    public function __construct(Pizza $_pizza = null)
     {
         $this->middleware('auth');
         $this->pizza= $_pizza;
-        $this->recipeTypes= $_recipeTypes;
-        $this->recipe= $_recipe;
     }
     public function index() {
         $listPizza= $this->pizza->getAllPizza();
@@ -41,26 +35,10 @@ class PizzaController extends Controller
 
     public function getAddPizza()
     {
-        $listRecipeTypes = $this->recipeTypes->getAllRecipeTypes();
-        $listRecipe= $this->recipe->getAllRecipe();
-        $listPizza= $this->pizza->getAllPizza();
-
-        return view('admin.food.add_pizza',[
-                'listRecipeTypes' => $listRecipeTypes,
-                'listRecipe' => $listRecipe,
-                'listPizza' => $listPizza
-
-
-            ]
-
-
-        );
+        return view('admin.food.add_pizza');
     }
     public function postAddPizza(PizzaRequest $request) {
         $newPizza= $this->pizza->addNewPizza($request);
-        $newRecipe= $this->recipe->addNewRecipe($request);
-        $newRecipeTypes= $this->recipeTypes->addNewRecipeTypes($request);
-
         if($newPizza == self::RETURN_STR_ZERO) {
             return redirect('admin/food/add_pizza')->with([
                 'message' => 'Header is error',
