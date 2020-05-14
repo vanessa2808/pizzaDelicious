@@ -20,6 +20,10 @@ class CreateBuggersTable extends Migration
                 $table->string('name');
                 $table->text('description');
                 $table->decimal('price');
+                $table->unsignedBigInteger('ingredientType_id');
+                $table->foreign('ingredientType_id')->references('id')->on('ingredientTypes')->onDelete('cascade');
+                $table->unsignedBigInteger('ingredient_id');
+                $table->foreign('ingredient_id')->references('id')->on('ingredients')->onDelete('cascade');
                 $table->text('recipe');
                 $table->string('chef');
                 $table->string('time');

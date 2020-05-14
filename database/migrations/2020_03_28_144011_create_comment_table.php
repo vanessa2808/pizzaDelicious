@@ -13,9 +13,9 @@ class CreateCommentTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('comment')) {
+        if (!Schema::hasTable('comments')) {
 
-            Schema::create('comment', function (Blueprint $table) {
+            Schema::create('comments', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->text('description');
                 $table->unsignedBigInteger('user_id');
