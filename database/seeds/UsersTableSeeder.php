@@ -14,13 +14,14 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-
         DB::table('users')->truncate();
         DB::table('users')->insert([
             [
                 'role_id' => '0', // admin
 
                 'name'=> 'Admin',
+                'avatar' => 'default.png',
+                'gender' => 'female',
                 'dateofbirth' => '2019-10-12',
                 'email' => 'steakfood@gmail.com',
                 'password' => bcrypt('12341234'),
@@ -35,6 +36,8 @@ class UsersTableSeeder extends Seeder
                 'role_id' => '1', // admin
 
                 'name'=> 'User',
+                'avatar' => 'default.png',
+                'gender' => 'female',
                 'dateofbirth' => '2019-10-12',
                 'email' => 'user@gmail.com',
                 'password' => bcrypt('12341234'),
