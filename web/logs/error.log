@@ -2427,3 +2427,4 @@
 [Wed Jun 10 11:15:03.810192 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
 [Thu Jun 11 00:04:15.933421 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Thu Jun 11 00:04:15.934502 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jun 11 14:16:56.405196 2020] [php7:notice] [pid 1826] [client 172.19.0.1:56902] PHP Notice:  Undefined index: password in /var/www/html/config/database.php on line 73
