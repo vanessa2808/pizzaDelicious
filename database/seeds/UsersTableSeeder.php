@@ -18,12 +18,10 @@ class UsersTableSeeder extends Seeder
                 'role_id' => '0', // admin
 
                 'name'=> 'Admin',
-                'avatar' => 'default.png',
-                'gender' => 'female',
                 'dateofbirth' => '2019-10-12',
                 'email' => 'steakfood@gmail.com',
                 'password' => bcrypt('12341234'),
-                'phone' => '12341234',
+                'phone' => '1234123412',
                 'address' => 'VietNam',
                 'email_verified_at' => Carbon::now(),
 
@@ -34,8 +32,6 @@ class UsersTableSeeder extends Seeder
                 'role_id' => '1', // admin
 
                 'name'=> 'User',
-                'avatar' => 'default.png',
-                'gender' => 'female',
                 'dateofbirth' => '2019-10-12',
                 'email' => 'user@gmail.com',
                 'password' => bcrypt('12341234'),
@@ -47,7 +43,5 @@ class UsersTableSeeder extends Seeder
 
             ]
         ]);
-
-
     }
 }
