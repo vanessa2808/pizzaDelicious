@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
                 'dateofbirth' => '2019-10-12',
                 'email' => 'steakfood@gmail.com',
                 'password' => bcrypt('12341234'),
-                'phone' => '1234123412',
+                'phone' => '12341234',
                 'address' => 'VietNam',
                 'email_verified_at' => Carbon::now(),
 
