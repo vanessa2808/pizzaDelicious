@@ -41,20 +41,7 @@ class UsersTableSeeder extends Seeder
 
                 'created_at' => Carbon::now(),
 
-            ],
-            [
-                'role_id' => '2', // admin
-
-                'name'=> 'Staff',
-                'dateofbirth' => '2019-10-12',
-                'email' => 'staff@gmail.com',
-                'password' => bcrypt('12341234'),
-                'phone' => '1234123413',
-                'address' => 'VietNam',
-                'email_verified_at' => Carbon::now(),
-
-                'created_at' => Carbon::now(),
-
+            
             ]
         ]);
     }
