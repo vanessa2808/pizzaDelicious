@@ -25,7 +25,6 @@ class CreateIngredientsTable extends Migration
             });
         }
     }
-
     /**
      * Reverse the migrations.
      *
