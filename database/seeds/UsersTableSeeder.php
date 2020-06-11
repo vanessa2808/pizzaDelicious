@@ -13,8 +13,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-\        DB::table('users')->insert([
+        DB::table('users')->insert([
             [
                 'role_id' => '0', // admin
 
@@ -48,8 +47,7 @@ class UsersTableSeeder extends Seeder
 
             ]
         ]);
-        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-        DB::statement('ALTER users DISABLE TRIGGER ALL;');
+      
 
     }
 }
