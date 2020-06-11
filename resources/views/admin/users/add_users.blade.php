@@ -70,8 +70,9 @@
                                                     <div class="col-lg-9">
                                                         <div class="form-select-list">
                                                             <select class="form-control custom-select-value" name="role_id">
-                                                                <option>1</option>
-                                                                <option>0</option>
+                                                                <option value="2">Staff</option>
+                                                                <option value="1">Customer</option>
+                                                                <option value="0">Manager</option>
 
                                                             </select>
                                                         </div>

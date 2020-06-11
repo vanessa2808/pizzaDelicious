@@ -164,8 +164,12 @@
                             <li class="nav-item">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                     <span class="adminpro-icon adminpro-user-rounded header-riht-inf"></span>
-                                    <span class="admin-name">{{Auth::User()->name}}</span>
-                                    <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
+                                    @if(Auth::user()->role_id == 0)
+                                    <span class="admin-name">Manager</span>
+                                    @elseif(Auth::user()->role_id == 2)
+                                        <span class="admin-name">Staff</span>
+                                    @endif
+                                        <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
                                     <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
@@ -176,9 +180,18 @@
                                     </li>
                                     <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Settings</a>
                                     </li>
-                                    <li><a href="#"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Log Out</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+
+                                            {{ __('Logout') }}
+                                        </a></li>
                                 </ul>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+
+
                             </li>
                             <li class="nav-item nav-setting-open"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-tasks"></i></a>
 

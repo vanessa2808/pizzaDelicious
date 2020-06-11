@@ -1,3 +1,5 @@
+@include('sweetalert::alert')
+
 @section('content')
     @extends('admin.layouts.master')
 @section('title', 'admin')
@@ -89,7 +91,17 @@
                                                         <tr>
                                                             <td></td>
                                                             <td>{{$key +1}}</td>
-                                                            <td>{{$users->role_id}}</td>
+                                                            <td>
+                                                                <?php
+                                                                if($users->role_id == 1) {
+                                                                    echo "Customer";
+                                                                }
+                                                                else if ($users->role_id == 0)
+                                                                   echo "Manager";
+                                                                else
+                                                                    echo "staff";
+                                                                ?>
+                                                            </td>
                                                             <td>{{$users->name}}</td>
 
                                                             <td>{{$users->email}}</td>
@@ -103,6 +115,7 @@
                                                                 <a href="{{route('admin.users.edit_users',['id'=>$users->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">Edit</i>
                                                                 </a>
                                                                 <a href="{{route('admin.users.delete',['id'=>$users->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">delete</i>
+
                                                                 </a>
 
                                                             </td>

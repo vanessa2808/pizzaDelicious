@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth as Auth;
 use App\User;
+
 class LoginController extends Controller
 {
     /*
@@ -40,6 +41,12 @@ class LoginController extends Controller
         if(Auth::user()->role_id == User::ROLE_ADMIN) {
             return '/admin/users/list_users';
         }
+        else if(Auth::user()->role_id == User::ROLE_STAFF){
+                return 'admin/orders/list_orders';
+
+            }
+
         return '/';
     }
+
 }

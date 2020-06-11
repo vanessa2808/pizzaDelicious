@@ -2406,3 +2406,24 @@
 [Wed May 13 01:44:48.077318 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
 [Thu May 14 00:16:41.479094 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
 [Thu May 14 00:16:41.480396 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'
+[Fri May 15 01:03:26.210562 2020] [core:warn] [pid 49] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri May 15 01:03:26.217899 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Fri May 15 01:03:26.218569 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
+[Sat May 23 13:25:23.671359 2020] [core:warn] [pid 66] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat May 23 13:25:23.676907 2020] [mpm_prefork:notice] [pid 66] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sat May 23 13:25:23.677338 2020] [core:notice] [pid 66] AH00094: Command line: '/usr/sbin/apache2'
+[Sun May 31 11:58:31.672132 2020] [core:warn] [pid 49] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun May 31 11:58:31.679527 2020] [mpm_prefork:notice] [pid 49] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Sun May 31 11:58:31.679890 2020] [core:notice] [pid 49] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Jun 02 08:13:49.146779 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Tue Jun 02 08:13:49.148236 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 03 07:29:15.775249 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed Jun 03 07:29:15.776550 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 03 08:16:54.103720 2020] [php7:error] [pid 41] [client 172.19.0.1:55820] PHP Fatal error:  Class 'App\\Http\\Controllers\\Admin\\Controller' not found in /var/www/html/app/Http/Controllers/Admin/StatisticController.php on line 7, referer: http://webfood.com/admin/users/list_users
+[Thu Jun 04 01:07:11.672553 2020] [autoindex:error] [pid 1241] [client 172.19.0.1:33790] AH01276: Cannot serve directory /var/www/html/public/login/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive, referer: http://webfood.com/
+[Mon Jun 08 08:22:05.697614 2020] [mpm_prefork:notice] [pid 34] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Mon Jun 08 08:22:05.698551 2020] [core:notice] [pid 34] AH00094: Command line: '/usr/sbin/apache2'
+[Wed Jun 10 11:15:03.809015 2020] [mpm_prefork:notice] [pid 37] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Wed Jun 10 11:15:03.810192 2020] [core:notice] [pid 37] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jun 11 00:04:15.933421 2020] [mpm_prefork:notice] [pid 35] AH00163: Apache/2.4.18 (Ubuntu) configured -- resuming normal operations
+[Thu Jun 11 00:04:15.934502 2020] [core:notice] [pid 35] AH00094: Command line: '/usr/sbin/apache2'

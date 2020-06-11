@@ -1,127 +1,127 @@
 @section('content')
     @extends('admin.layouts.master')
 @section('title', 'admin')
-<div class="content-wrapper">
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Dashboard</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Đơn hàng</li>
-                </ol>
-            </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <section class="content">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="justify-content-between d-flex">
-                        <h3 class="card-title px-3 align-self-center">Thông tin đơn hàng</h3>
-                        <a href="{{ route('admin.orders.editOrders', ['id'=>$idOrders->id])}}" class="btn btn-primary">Cập nhật</a>
-                    </div>
-                    <div class="card-body d-flex">
-                        <div class="col-6">
-                            <div> Mã Đơn Hàng : {{$oOrder->id}}</div>
-                            <div> Mã Bill : {{$oOrder->tracking_number}}</div>
-                            <div> Thanh Toán : 
-                                @if($oOrder->payment_type == 1)
-                                    Thanh toán khi nhận hàng
-                                @else 
-                                    Thanh toán qua thẻ tín dụng
-                                @endif
-                            </div>
-                            <div> Trạng thái : {{$oOrder->status->name}}</div>
+
+<div class="wrapper-pro">
+
+    <div class="content-inner-all">
+        <div class="breadcome-area mg-b-30 small-dn">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1 col-md-6 col-sm-6 col-xs-12">
+                        <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="admin-logo logo-wrap-pro">
+                            <a href="#"><img src="admin/img/logo/log.png" alt="" />
+                            </a>
                         </div>
-                        <div class="col-6">
-                            <div> Tên người nhận : {{$oOrder->recipient}} - (ID: {{$oOrder->user_id}})</div>
-                            <div> Số điện thoại : {{$oOrder->phone_number}}</div>
-                            <div> Địa chỉ : {{$oOrder->address}}</div>
-                            <div> Tổng tiền : <span class="font-weight-bold">{{number_format($oOrder->total)}}</span> VND</div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="breadcome-list map-mg-t-40-gl shadow-reset">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="breadcome-heading">
+                                        <form role="search" class="">
+                                            <input type="text" placeholder="Search..." class="form-control">
+                                            <a href=""><i class="fa fa-search"></i></a>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <ul class="breadcome-menu">
+                                        <li><a href="#">Home</a> <span class="bread-slash">/</span>
+                                        </li>
+                                        <li><span class="bread-blod">list_orders Details</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Danh sách sản phẩm</h3>
+            <div class="data-table-area mg-b-15">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="sparkline13-list shadow-reset">
+                                <div class="sparkline13-hd">
+                                    <div class="main-sparkline13-hd">
+                                        <h1>List <span class="table-project-n">Orders Details</span> </h1>
+                                        <div class="sparkline13-outline-icon">
+                                            <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
+                                            <span><i class="fa fa-wrench"></i></span>
+                                            <span class="sparkline13-collapse-close"><i class="fa fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sparkline13-graph">
+                                    <div class="datatable-dashv1-list custom-datatable-overright">
+                                        <div id="toolbar">
+                                            <select class="form-control">
+                                                <option value="">Export Basic</option>
+                                                <option value="all">Export All</option>
+                                                <option value="selected">Export Selected</option>
+                                            </select>
+                                        </div>
+                                        <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                            <thead>
+                                            <tr>
+                                                <th data-field="state" data-checkbox="true"></th>
+                                                <th data-field="id">ID</th>
+                                                <th data-field="price" data-editable="true">price</th>
+
+                                                <th data-field="quantity" data-editable="true">quantity</th>
+                                                <th data-field="pizza_id" data-editable="true">pizza_id</th>
+                                                <th data-field="order_id" data-editable="true">order_id</th>
+
+
+                                                <th data-field="created_at">created at</th>
+                                                <th data-field="updated_at">updated at</th>
+
+                                                <th data-field="action">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>1</td>
+                                                    <td>1.000.000</td>
+                                                    <td>4</td>
+                                                    <td>Salad</td>
+                                                    <td>2</td>
+                                                    <td>2019-02-02 00:00:00</td>
+                                                    <td>2019-02-02 00:00:00</td>
+                                                    <td>
+
+                                                        <a href="" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">view</i>
+                                                        </a>
+                                                        <a href="" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">delete</i>
+                                                        </a>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <table id="example1" class="table table-bordered table-hover">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Sản Phẩm</th>
-                        <th>Size</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th>Thành Tiền</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($oOrder->orderdetails as $key => $orderdetail)
-                        <tr>
-                            <td>{{$key+1}}</td>
-                            <td>{{$orderdetail->productdetail->product->name}}</td>
-                            <td>{{$orderdetail->productdetail->size}}</td>
-                            <td>{{$orderdetail->quantity}}</td>
-                            <td>{{number_format($orderdetail->price)}}</td>
-                            <td>{{number_format($orderdetail->price * $orderdetail->quantity)}}</td>
-                            
-                            <td>
-                                <a href="#" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th>#</th>
-                        <th>Sản Phẩm</th>
-                        <th>Size</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th>Thành Tiền</th>
-                        <th>Action</th>
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
+
 
         </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
+    </div>
 </div>
+</div>
+
 @endsection
-@section('script')
-<script>
-    $(document).ready(function(){
-        $('#example1').DataTable();
-        @if(Session::has('message'))
-            @if (Session::get('class') == 'error')
-                toastr.error('{{ Session::get('message') }}')
-            @else
-                toastr.success('{{ Session::get('message') }}')
-            @endif
-        @endif
-        
-    })
-</script>
-@endsection
+
+
+

@@ -72,9 +72,10 @@
                                                 <th data-field="state" data-checkbox="true"></th>
                                                 <th data-field="id">ID</th>
                                                  <th data-field="total" data-editable="true">total</th>
-                                                
+
                                                 <th data-field="status" data-editable="true">status</th>
                                                 <th data-field="user_id" data-editable="true">user_id</th>
+                                                <th data-field="payment_type" data-editable="true">payment_type</th>
 
 
                                                 <th data-field="created_at">created at</th>
@@ -89,18 +90,33 @@
                                                     <td></td>
                                                     <td>{{$key +1}}</td>
                                                     <td>{{$orders->total}}</td>
-                                                    <td>{{$orders->status}}</td>
+                                                    <td>
+                                                        @if($orders->payment_type == 1)
+                                                            con hang
+                                                        @else
+                                                            het hang
+                                                        @endif
+                                                    </td>
                                                     <td>{{$orders->user_id}}</td>
-
+                                                    <td>
+                                                        @if($orders->payment_type == 1)
+                                                            credit card
+                                                            @else
+                                                            Cash
+                                                            @endif
+                                                    </td>
 
 
                                                     <td>{{$orders->created_at}}</td>
                                                     <td>{{$orders->updated_at}}</td>
                                                     <td>
-                                                        <a href="{{route('admin.orders.editOrders',['id'=>$orders->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">Edit</i>
+                                                        @if ($orders->approved == 0)
+                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">Approved</i>
                                                         </a>
-                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">delete</i>
+                                                        @elseif($orders->approved ==1)
+                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">Approved</i>
                                                         </a>
+                                                            @endif
 
                                                     </td>
 

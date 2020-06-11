@@ -36,7 +36,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <ul>
                                 <li><a id="navbarDropdown" class="dropdown-item" href="/admin/users/list_users">Manage</a></li>
-                                <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                <li><a class="adminpro-icon adminpro-locked author-log-ic" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
 

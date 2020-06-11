@@ -10,9 +10,7 @@
 
                     <div class="col-md-7 col-sm-12 text-center ftco-animate">
                         <h1 class="mb-3 mt-5 bread">Register </h1>
-                        <section class="ftco-section contact-section">
 
-                            <div class="col-md-6 ftco-animate" style="border-radius: 10px; ">
                                 <form action="{{route('register')}}" class="contact-form" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
@@ -98,7 +96,6 @@
                                     <div class="form-group">
                                         <input type="submit" value="Register" class="btn btn-primary py-3 px-5">
                                     </div>
-                                </form>
                                 </form>
                             </div>
 

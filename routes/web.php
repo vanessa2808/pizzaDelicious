@@ -9,12 +9,23 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('page.home');
 });
+Route::get('alert/{AlertType}','sweetalertController@alert')->name('alert');
 Route::get('/about', function () {
     return view('page.about');
+});
+Route::get('admin/statistic/list_statistics', function () {
+    return view('admin.statistic.list_statistics');
+});
+Route::get('admin/orders/list_orderDetails', function () {
+    return view('admin.orders.list_orderDetails');
+});
+Route::get('admin/orders/takeFoodAndServe', function () {
+    return view('admin.orders.takeFoodAndServe');
 });
 Route::get('/service', function () {
     return view('page.service');
 });
+
 Route::get('/blog', function () {
     return view('page.blog');
 });
@@ -62,6 +73,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::get('edit_users/{id}', ['as' => 'admin.users.edit_users', 'uses' => 'UserController@getEdit']);
         Route::post('edit_users/{id}', ['as' => 'admin.users.edit_users', 'uses' => 'UserController@postEdit']);
         Route::get('delete/{id}', ['as' => 'admin.users.delete', 'uses' => 'UserController@delete']);
+
     });
     Route::group(['prefix' => '/admin/blog'], function () {
         Route::get('/add_blog', ['as' => 'admin.blog.add_blog', 'uses' => 'BlogController@getAddBlog']);
@@ -339,6 +351,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::post('edit_customPizza/{id}', ['as' => 'admin.custom.edit_customPizza', 'uses' => 'CustomPizzaController@postEditCustomPizza']);
         Route::get('delete/{id}', ['as' => 'admin.custom.deleteCu', 'uses' => 'CustomPizzaController@deleteCu']);
     });
+
+
+
+
 
 
 

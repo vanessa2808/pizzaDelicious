@@ -11,6 +11,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="admin/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
 
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <link rel="stylesheet" href="admin/css/summernote.css">
 
     <link rel="stylesheet" href="css/responsive.css">
@@ -126,10 +128,19 @@
 <script src="admin/js/data-table/bootstrap-table-resizable.js"></script>
 <script src="admin/js/data-table/colResizable-1.5.source.js"></script>
 <script src="admin/js/data-table/bootstrap-table-export.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script>
+    swal({
+        title: 'great job',
+        type: 'success'
+    });
+</script>
 
-<!-- main JS
-    ============================================ -->
+
+
 <script src="admin/js/main.js"></script>
+@include('sweetalert::alert')
+
 </body>
 
 </html>

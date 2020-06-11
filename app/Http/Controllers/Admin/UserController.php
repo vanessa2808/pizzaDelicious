@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Session;
+use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,10 +12,7 @@ use App\User;
 class UserController extends Controller
 {
     protected $users;
-    protected const RETURN_NUM_ZERO = 0;
-    protected const RETURN_NUM_ONE = 1;
-    protected const RETURN_STR_ZERO = "0";
-    protected const RETURN_STR_ONE = "1";
+
     public function __construct(User $_users = null)
     {
         $this->middleware('auth');
@@ -47,7 +46,10 @@ class UserController extends Controller
         if($newUsers == self::RETURN_STR_ZERO){
             return redirect('admin/users/add_users');
         }
+
         return redirect('admin/users/list_users');
+        alert()->success('Post Created', 'Successfully'); // hoặc có thể dùng alert('Post Created','Successfully', 'success');
+
     }
     /**
      * Store a newly created resource in storage.
@@ -105,8 +107,11 @@ class UserController extends Controller
     {
         $idUsers = $this->users->deleteUser($id);
         if($idUsers == self::RETURN_STR_ZERO){
+
             return redirect()->back();
         }
-        return redirect('/admin/users/list_users');
+
+
+        return redirect('admin/users/list_users');
     }
 }

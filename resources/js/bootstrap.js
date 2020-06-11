@@ -11,6 +11,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require("sweetalert");
 } catch (e) {}
 
 /**

@@ -9,16 +9,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
     use Notifiable;
     public const ROLE_ADMIN = 0;
     public const ROLE_USER =1;
-    protected const RETURN_NUM_ZERO = 0;
-    protected const RETURN_NUM_ONE = 1;
-    protected const RETURN_STR_ZERO = "0";
-    protected const RETURN_STR_ONE = "1";
+    public const ROLE_STAFF =2;
+
     protected $table= 'users';
 
 
@@ -73,7 +72,8 @@ class User extends Authenticatable
         $newUsers->dateofbirth = $request->dateofbirth;
         $newUsers->address = $request->address;
         $newUsers->email = $request->email;
-        $newUsers->password = $request->password;
+        $newUsers->password = Hash::make($request->password);
+
         $newUsers->created_at = Carbon::now();
 
         if(! $newUsers->save()) {
@@ -107,7 +107,9 @@ class User extends Authenticatable
         if(! $idUser->destroy($id)) {
             return self::RETURN_STR_ZERO;
         }
+
         return $idUser;
+
     }
 
 

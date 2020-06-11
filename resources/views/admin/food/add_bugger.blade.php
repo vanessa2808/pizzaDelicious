@@ -5,7 +5,6 @@
 @section('title', 'admin')
 
 <div class="wrapper-pro">
-
     <div class="content-inner-all">
         <div class="breadcome-area mg-b-30 small-dn">
             <div class="container-fluid">

@@ -4,19 +4,36 @@
         <div class="sidebar-header">
             <a href="#"><img src="admin/img/message/1.jpg" alt="" />
             </a>
-            <h3>{{Auth::User()->name}}</h3>
+            @if(Auth::user()->role_id == 0)
+            <h3>Manager</h3>
+            @else
+                <h3>Staff</h3>
+
+            @endif
             <p>Developer</p>
             <strong>AP+</strong>
         </div>
+
         <div class="left-custom-menu-adp-wrap">
             <ul class="nav navbar-nav left-sidebar-menu-pro">
-                <li class="nav-item">
+                @if(Auth::user()->role_id == 2)
+
+                <li class="nav-item hidden">
                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
                         <a href="admin/users/add_users" class="dropdown-item">Add_users</a>
-                        <a href="admin/users/list_users" class="dropdown-item">List_users</a>
+                        <a href="admin/users/list_users" class="dropdown-item disabled">List_users</a>
                     </div>
                 </li>
+                    @elseif(Auth::user()->role_id ==0)
+                    <li class="nav-item ">
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Users</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                        <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
+                            <a href="admin/users/add_users" class="dropdown-item">Add_users</a>
+                            <a href="admin/users/list_users" class="dropdown-item">List_users</a>
+                        </div>
+                    </li>
+                @endif
                 <li class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-envelope"></i> <span class="mini-dn">Activities</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                     <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
                         <a href="admin/activities/add_activities" class="dropdown-item">Add_activities</a>
@@ -129,6 +146,7 @@
                     <div role="menu" class="dropdown-menu left-menu-dropdown pages-left-menu-std animated flipInX">
                         <a href="admin/orders/list_orders" class="dropdown-item">List orders</a>
                         <a href="admin/orders/list_orderDetails" class="dropdown-item">List orderDetails</a>
+                        <a href="admin/orders/takeFoodAndServe" class="dropdown-item">takeFoodAndServe</a>
 
 
 
@@ -160,7 +178,23 @@
                         <a href="admin/custom/list_customPizzaIngredients" class="dropdown-item">list_customPizzaIngredients</a>
 
                     </div>
+
                 </li>
+                @if(Auth::user()->role_id == 2)
+                <li   class="nav-item hidden"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-edit"></i> <span class="mini-dn">statistics</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                    <div  role="menu" class="dropdown-menu disabled left-menu-dropdown form-left-menu-std animated flipInX">
+                        <a href="admin/statistic/list_statistics"class="dropdown-item disabled">list_statistic</a>
+
+                    </div>
+                </li>
+                    @else(Auth::user()->role_id == 0)
+                        <li   class="nav-item "><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-edit"></i> <span class="mini-dn">statistics</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                            <div  role="menu" class="dropdown-menu disabled left-menu-dropdown form-left-menu-std animated flipInX">
+                                <a href="admin/statistic/list_statistics"class="dropdown-item disabled">list_statistic</a>
+
+                            </div>
+                        </li>
+                    @endif
 
 
 
@@ -169,126 +203,7 @@
         </div>
     </nav>
 </div>
-<div class="mobile-menu-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="mobile-menu">
-                    <nav id="dropdown">
-                        <ul class="mobile-menu-nav">
-                            <li><a data-toggle="collapse" data-target="#Charts" href="#">Header <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul class="collapse dropdown-header-top">
-                                    <li><a href="#">Add_header</a>
-                                    </li>
-                                    <li><a href="#">List_header</a>
-                                    </li>
 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#demo" href="#">Activities <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="demo" class="collapse dropdown-header-top">
-                                    <li><a href="inbox.html">Add_activities</a>
-                                    </li>
-                                    <li><a href="view-mail.html">List_activities</a>
-                                    </li>
-                                    <li><a href="compose-mail.html">List Image</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#others" href="#">Address <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="others" class="collapse dropdown-header-top">
-                                    <li><a href="profile.html">Add_address</a>
-                                    </li>
-                                    <li><a href="contact-client.html">List_address</a>
-
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">Food <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-                                    <li><a href="google-map.html">Add_pizza</a>
-                                    </li>
-                                    <li><a href="data-maps.html">List_pizza</a>
-                                    </li>
-
-
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Chartsmob" href="#">Chef <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Chartsmob" class="collapse dropdown-header-top">
-                                    <li><a href="bar-charts.html">Add Chef</a>
-                                    </li>
-                                    <li><a href="line-charts.html">List Chef</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Menu <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Tablesmob" class="collapse dropdown-header-top">
-                                    <li><a href="static-table.html">Add menu</a>
-                                    </li>
-                                    <li><a href="data-table.html">List menu</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#formsmob" href="#">Menu pricing <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="formsmob" class="collapse dropdown-header-top">
-                                    <li><a href="basic-form-element.html">Add menuPricing</a>
-                                    </li>
-                                    <li><a href="advance-form-element.html">List menuPricing</a>
-
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">Function services <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Appviewsmob" class="collapse dropdown-header-top">
-                                    <li><a href="basic-form-element.html">add function services</a>
-                                    </li>
-                                    <li><a href="advance-form-element.html">List function services</a>
-                                    </li>
-                                    <li><a href="password-meter.html">List number of function services</a>
-                                    </li>
-
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Blog <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Pagemob" class="collapse dropdown-header-top">
-                                    <li><a href="login.html">Add_blog</a>
-                                    </li>
-                                    <li><a href="register.html">List_blog</a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">Contact Information <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Appviewsmob" class="collapse dropdown-header-top">
-                                    <li><a href="basic-form-element.html">Add Contact</a>
-                                    </li>
-                                    <li><a href="advance-form-element.html">List Contact</a>
-                                    </li>
-
-
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#Appviewsmob" href="#">Users <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
-                                <ul id="Appviewsmob" class="collapse dropdown-header-top">
-                                    <li><a href="basic-form-element.html">Add users</a>
-                                    </li>
-                                    <li><a href="advance-form-element.html">List users</a>
-                                    </li>
-                                    </li>
-
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                        </ul>
-                    </nav>
-                </div>
-            </div>
         </div>
     </div>
 </div>
