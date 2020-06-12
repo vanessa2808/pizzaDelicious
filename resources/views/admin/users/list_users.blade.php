@@ -86,6 +86,17 @@
                                                         <th data-field="action">Action</th>
                                                     </tr>
                                                     </thead>
+                                                    @if(Session::has('message'))
+                                                        <p style="width: 600px; height: 20px;  padding: 100px " class="alert alert-info">{{ Session::get('message') }}</p>
+                                                    @endif
+                                                    @if(Session::has('delete'))
+                                                        <p style="width: 600px; height: 20px;  padding: 100px " class="alert alert-info">{{ Session::get('delete') }}
+                                                            <button href="#">cancel</button>
+                                                            <button href="{{session('delete')}}">Confirm</button>
+                                                        </p>
+
+                                                    @endif
+
                                                     <tbody>
                                                     @foreach($listUsers as $key => $users)
                                                         <tr>
@@ -114,7 +125,8 @@
                                                             <td>
                                                                 <a href="{{route('admin.users.edit_users',['id'=>$users->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">Edit</i>
                                                                 </a>
-                                                                <a href="{{route('admin.users.delete',['id'=>$users->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">delete</i>
+
+                                                                <a href="{{route('admin.users.delete',['id'=>$users->id])}}" class="  btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">{{session('status')}}delete</i>
 
                                                                 </a>
 

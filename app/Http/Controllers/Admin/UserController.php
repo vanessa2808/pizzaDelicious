@@ -45,10 +45,11 @@ class UserController extends Controller
         $newUsers = $this->users->addNewUsers($request);
         if($newUsers == self::RETURN_STR_ZERO){
             return redirect('admin/users/add_users');
-        }
+            Session::flash('message', 'Update fail');
 
+        }
+        Session::flash('message', 'Update successful');
         return redirect('admin/users/list_users');
-        alert()->success('Post Created', 'Successfully'); // hoặc có thể dùng alert('Post Created','Successfully', 'success');
 
     }
     /**
@@ -110,8 +111,9 @@ class UserController extends Controller
 
             return redirect()->back();
         }
-
+        Session::flash('delete', 'Are you sure to delete!');
 
         return redirect('admin/users/list_users');
+
     }
 }
