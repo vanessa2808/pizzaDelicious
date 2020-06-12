@@ -73,6 +73,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::get('edit_users/{id}', ['as' => 'admin.users.edit_users', 'uses' => 'UserController@getEdit']);
         Route::post('edit_users/{id}', ['as' => 'admin.users.edit_users', 'uses' => 'UserController@postEdit']);
         Route::get('delete/{id}', ['as' => 'admin.users.delete', 'uses' => 'UserController@delete']);
+        Route::get('notifies/{id}', ['as' => 'admin.users.delete', 'uses' => 'UserController@delete']);
 
     });
     Route::group(['prefix' => '/admin/blog'], function () {

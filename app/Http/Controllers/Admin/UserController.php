@@ -116,4 +116,11 @@ class UserController extends Controller
         return redirect('admin/users/list_users');
 
     }
+    public function notifies($id)
+    {
+        Session::flash('delete', 'Are you sure to delete!');
+
+        return redirect('admin/users/list_users');
+
+    }
 }

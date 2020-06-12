@@ -87,12 +87,12 @@
                                                     </tr>
                                                     </thead>
                                                     @if(Session::has('message'))
-                                                        <p style="width: 600px; height: 20px;  padding: 100px " class="alert alert-info">{{ Session::get('message') }}</p>
+                                                        <p style="width: 600px; height: 40px" class="alert alert-info">{{ Session::get('message') }}</p>
                                                     @endif
                                                     @if(Session::has('delete'))
                                                         <p style="width: 600px; height: 20px;  padding: 100px " class="alert alert-info">{{ Session::get('delete') }}
-                                                            <button href="#">cancel</button>
-                                                            <button href="{{session('delete')}}">Confirm</button>
+                                                            <button><a href="admin/users/list_users"> cancel</a></button>
+                                                            <button> <a href="{{session('alert')}}"></a>Confirm</button>
                                                         </p>
 
                                                     @endif
