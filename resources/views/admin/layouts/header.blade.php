@@ -172,7 +172,7 @@
                                         <span class="author-project-icon adminpro-icon adminpro-down-arrow"></span>
                                 </a>
                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                    <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
+                                    <li><a href="admin/users/list_users/id="><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
                                     </li>
                                     <li><a href="#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
                                     </li>
@@ -186,6 +186,7 @@
 
                                             {{ __('Logout') }}
                                         </a></li>
+
                                 </ul>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf

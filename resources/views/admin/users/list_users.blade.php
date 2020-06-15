@@ -92,7 +92,9 @@
                                                     @if(Session::has('delete'))
                                                         <p style="width: 600px; height: 20px;  padding: 100px " class="alert alert-info">{{ Session::get('delete') }}
                                                             <button><a href="admin/users/list_users"> cancel</a></button>
-                                                            <button> <a href="{{session('alert')}}"></a>Confirm</button>
+                                                            <button> <a href="{{session('alert')}}"></a>Confirm
+
+                                                            </button>
                                                         </p>
 
                                                     @endif

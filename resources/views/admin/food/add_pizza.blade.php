@@ -34,7 +34,7 @@
                                     <ul class="breadcome-menu">
                                         <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                         </li>
-                                        <li><span class="bread-blod">Add Pizza</span>
+                                        <li><span class="bread-blod">Add food</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -52,7 +52,7 @@
                         <div class="sparkline8-list basic-res-b-30 shadow-reset">
                             <div class="sparkline8-hd">
                                 <div class="main-sparkline8-hd">
-                                    <h1>Add Pizza </h1>
+                                    <h1>Add food </h1>
                                     <div class="sparkline8-outline-icon">
                                         <span class="sparkline8-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                         <span><i class="fa fa-wrench"></i></span>
@@ -66,7 +66,7 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
                                             <div class="basic-login-inner">
-                                                <h3>Add Pizza</h3>
+                                                <h3>Add food</h3>
                                                 <form action="admin/food/add_pizza" method="POST" enctype="multipart/form-data">
                                                     @csrf
 

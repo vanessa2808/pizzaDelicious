@@ -49,7 +49,7 @@
                             <div class="sparkline13-list shadow-reset">
                                 <div class="sparkline13-hd">
                                     <div class="main-sparkline13-hd">
-                                        <h1>List <span class="table-project-n">Pizza list_ingredient</span> </h1>
+                                        <h1> <span class="table-project-n"> list_ingredient</span> </h1>
                                         <div class="sparkline13-outline-icon">
                                             <span class="sparkline13-collapse-link"><i class="fa fa-chevron-up"></i></span>
                                             <span><i class="fa fa-wrench"></i></span>
