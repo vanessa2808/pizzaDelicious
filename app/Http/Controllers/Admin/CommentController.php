@@ -53,7 +53,7 @@ class CommentController extends Controller
     {
         $newComment = $this->comments->addNewComment($request);
         if($newComment == self::RETURN_STR_ZERO) {
-            return redirect('admin/comments/add_comment);'
+            return redirect('admin/comments/add_comment ');
         }
         return redirect('admin/comments/list_comment');
     }
@@ -87,13 +87,13 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function postEditComment(FoodRequest $request, $id)
+    public function postEditComment(CommentRequest $request, $id)
     {
-        $idFood = $this->food->updateFood($request,$id);
-        if($idFood == self::RETURN_STR_ZERO) {
+        $idComment = $this->comments->updateComment($request,$id);
+        if($idComment == self::RETURN_STR_ZERO) {
             return redirect()->back();
         }
-        return redirect('admin/food/list_food');
+        return redirect('admin/comments/list_comment');
     }
 
     /**
@@ -104,10 +104,10 @@ class CommentController extends Controller
      */
     public function delete($id)
     {
-        $idFood = $this->food->deteteFood($id);
-        if(!$idFood == self::RETURN_STR_ZERO) {
+        $idComment = $this->comments->deleteComment($id);
+        if(!$idComment == self::RETURN_STR_ZERO) {
             return redirect()->back();
         }
-        return redirect('admin/food/list_food');
+        return redirect('admin/comments/list_comment');
     }
 }

@@ -23,10 +23,10 @@ class Comment extends Model
         return $this->all();
     }
     public function addNewComment($request) {
-        $newComment = new Pizza();
+        $newComment = new Comment();
         $newComment->description= $request->description;
-        $newComment->user_id= 2;
-        $newComment->pizza_id= 2;
+        $newComment->user_id= '3';
+        $newComment->pizza_id= 1;
         $newComment->approved = 0;
         $newComment->created_at = Carbon::now();
         if(! $newComment->save()) {
@@ -42,8 +42,8 @@ class Comment extends Model
         $idComment = $this->find($id);
         $idComment->description= $request->description;
 
-        $idComment->user_id= 2;
-        $idComment->pizza_id= 2;
+        $idComment->user_id= 3;
+        $idComment->pizza_id= 1;
         $idComment->approved = 0;
 
         $idComment->updated_at = Carbon::now();

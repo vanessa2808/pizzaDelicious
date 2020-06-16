@@ -59,7 +59,6 @@ Route::group(['prefix' => '/admin/custom'], function () {
 
 });
 
-Route::get('/admin/comments/list_comments', 'CommentController@index')->name('');
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' => 'administrator'], function() {
@@ -353,7 +352,15 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::get('delete/{id}', ['as' => 'admin.custom.deleteCu', 'uses' => 'CustomPizzaController@deleteCu']);
     });
 
+    Route::group(['prefix' => '/admin/comments'], function () {
+        Route::get('/add_comment', ['as' => 'admin.comments.add_comment', 'uses' => 'CommentController@getAddComment']);
+        Route::post('/add_comment', ['as' => 'admin.comments.add_comment', 'uses' => 'CommentController@postAddComment']);
+        Route::get('/list_comment', ['as' => 'admin.comments.list_comment', 'uses' => 'CommentController@index']);
 
+        Route::get('edit_comment/{id}', ['as' => 'admin.comments.edit_comment', 'uses' => 'CommentController@getEditComment']);
+        Route::post('edit_comment/{id}', ['as' => 'admin.comments.edit_comment', 'uses' => 'CommentController@postEditComment']);
+        Route::get('delete/{id}', ['as' => 'admin.comments.delete', 'uses' => 'CommentController@delete']);
+    });
 
 
 

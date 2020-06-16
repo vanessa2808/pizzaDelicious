@@ -11,20 +11,33 @@ class CommentRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function rules()
     {
-        return false;
+        return [
+
+            'description' => 'required',
+            'user_id' => '3',
+            'pizza_id' => '1',
+            'approved' => '0',
+
+
+        ];
     }
+
+
 
     /**
      * Get the validation rules that apply to the request.
      *
      * @return array
      */
-    public function rules()
+    public function messages()
     {
         return [
-            //
+
+
+
+
         ];
     }
 }
