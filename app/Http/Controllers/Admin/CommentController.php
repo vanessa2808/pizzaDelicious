@@ -1,24 +1,36 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Comments;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\CommentRequest;
+use App\Models\Comment;
 
 class CommentController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    protected $comments;
+    protected const RETURN_NUM_ZERO = 0;
+    protected const RETURN_NUM_ONE = 1;
+    protected const RETURN_STR_ZERO = "0";
+    protected const RETURN_STR_ONE = "1";
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(Comment $_comments = null)
+    {
+        $this->middleware('auth');
+        $this->comments=$_comments;
+    }
+
     public function index()
     {
-        return view('admin.comments.list_comments');
+        $listComment= $this->comments->getAllComment();
+        return view('admin.comments.list_comment',[
+            'listComment' => $listComment
+        ]);
     }
 
     /**
@@ -26,12 +38,10 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getAddComment()
     {
-        return view('admin.comments.add_comments');
-
+        return view('admin.comments.add_comment');
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -39,53 +49,65 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function postAddComment(CommentRequest $request)
     {
-        //
+        $newComment = $this->comments->addNewComment($request);
+        if($newComment == self::RETURN_STR_ZERO) {
+            return redirect('admin/comments/add_comment);'
+        }
+        return redirect('admin/comments/list_comment');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comments  $comments
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Comments $comments)
+    public function getEditComment($id)
     {
-        //
+        $idComment = $this->comments->getCommentById($id);
+        return view('admin.comments.edit_comments',[
+            'idComment' => $idComment
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comments  $comments
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comments $comments)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Comments  $comments
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comments $comments)
+    public function postEditComment(FoodRequest $request, $id)
     {
-        //
+        $idFood = $this->food->updateFood($request,$id);
+        if($idFood == self::RETURN_STR_ZERO) {
+            return redirect()->back();
+        }
+        return redirect('admin/food/list_food');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comments  $comments
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments)
+    public function delete($id)
     {
-        //
+        $idFood = $this->food->deteteFood($id);
+        if(!$idFood == self::RETURN_STR_ZERO) {
+            return redirect()->back();
+        }
+        return redirect('admin/food/list_food');
     }
 }
