@@ -360,6 +360,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'verified', 'middleware' =
         Route::get('edit_comment/{id}', ['as' => 'admin.comments.edit_comment', 'uses' => 'CommentController@getEditComment']);
         Route::post('edit_comment/{id}', ['as' => 'admin.comments.edit_comment', 'uses' => 'CommentController@postEditComment']);
         Route::get('delete/{id}', ['as' => 'admin.comments.delete', 'uses' => 'CommentController@delete']);
+
     });
 
 

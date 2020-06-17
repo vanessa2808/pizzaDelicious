@@ -67,7 +67,7 @@ class CommentController extends Controller
     public function getEditComment($id)
     {
         $idComment = $this->comments->getCommentById($id);
-        return view('admin.comments.edit_comments',[
+        return view('admin.comments.edit_comment',[
             'idComment' => $idComment
         ]);
     }

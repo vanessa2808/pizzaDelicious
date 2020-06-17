@@ -111,10 +111,10 @@
                                                     <td>{{$orders->updated_at}}</td>
                                                     <td>
                                                         @if ($orders->approved == 0)
-                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">Approved</i>
+                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-primary rounded-circle ml-3"><i class="fas fa-pen text-white">confirmed</i>
                                                         </a>
                                                         @elseif($orders->approved ==1)
-                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">Approved</i>
+                                                        <a href="{{route('admin.orders.delete',['id'=>$orders->id])}}" class="btn btn-danger rounded-circle ml-3"><i class="fas fa-trash-alt text-white">confirmed</i>
                                                         </a>
                                                             @endif
 
