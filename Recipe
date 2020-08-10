@@ -1,0 +1,66 @@
+/*
+-- Query: SELECT * FROM pizza_60.recipes
+LIMIT 0, 1000
+
+-- Date: 2020-04-18 15:00
+*/
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (20,16,'Cabbage','<p>Xa lach tuoi tron</p>','2020-04-18 07:25:57','2020-04-18 07:25:57');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (22,16,'cauliflower','<p>Sup lo luoc</p>','2020-04-18 07:30:55','2020-04-18 07:30:55');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (23,16,'eggplant','<p>ca tim luoc</p>','2020-04-18 07:31:26','2020-04-18 07:31:26');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (24,16,'pinach','<p>Rau tuoi</p>','2020-04-18 07:31:48','2020-04-18 07:31:48');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (25,16,'broccoli','<p>Bong cai xanh luoc</p>','2020-04-18 07:32:16','2020-04-18 07:32:16');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (26,16,'lettuce','<p>Rau diep ca&nbsp;</p>','2020-04-18 07:33:02','2020-04-18 07:33:02');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (28,16,'horseradish','<p>rau cai</p>','2020-04-18 07:33:45','2020-04-18 07:33:45');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (30,16,'radish','<p>cu cai</p>','2020-04-18 07:34:48','2020-04-18 07:34:48');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (31,16,'kohlrabi','<p>Xu hao</p>\r\n\r\n<p>&nbsp;</p>','2020-04-18 07:35:14','2020-04-18 07:35:14');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (32,17,'Potato','<p>khoai tay</p>\r\n\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\">&nbsp;</div>','2020-04-18 07:36:10','2020-04-18 07:36:10');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (33,17,'peas','<p>Dau ha Lan</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:36:44','2020-04-18 07:36:44');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (34,17,'corn','<p>Dau ha Lan</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:37:08','2020-04-18 07:37:08');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (35,17,'tomato','<p>Ca chua</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:37:32','2020-04-18 07:37:32');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (36,17,'marrow','<p>Bi xanh</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:37:51','2020-04-18 07:37:51');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (37,17,'sweet potato','<p>Khoai lang</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:38:15','2020-04-18 07:38:15');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (38,17,'cassava root','<p>Khoai mi</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:38:33','2020-04-18 07:38:33');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (39,17,'wintermelon','<p>Bi dao</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:38:48','2020-04-18 07:38:48');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (40,17,'lotus root','<p>Cu sen</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:39:05','2020-04-18 07:39:05');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (41,17,'string bean','<p>ddau dua</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:39:33','2020-04-18 07:39:33');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (42,17,'okra/ lady’s fingers','<p>Dau bap</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:39:55','2020-04-18 07:39:55');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (43,17,'avocado','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:40:32','2020-04-18 07:40:32');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (44,17,'apple','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:45:20','2020-04-18 07:45:20');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (45,17,'Orange','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:45:33','2020-04-18 07:45:33');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (46,17,'Banana','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:45:46','2020-04-18 07:45:46');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (47,17,'Grape','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:45:58','2020-04-18 07:45:58');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (48,17,'grapefruit','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:46:11','2020-04-18 07:46:11');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (49,17,'mango','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:46:23','2020-04-18 07:46:23');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (50,17,'pineapple','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:46:34','2020-04-18 07:46:34');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (51,17,'jackfruit','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:46:56','2020-04-18 07:46:56');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (52,17,'dừa','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:47:11','2020-04-18 07:47:11');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (53,17,'guava','<p>bo</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:47:24','2020-04-18 07:47:24');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (54,18,'Chicken','<p>trung ga</p>\r\n\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\">&nbsp;</div>','2020-04-18 07:48:12','2020-04-18 07:48:12');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (55,18,'fish','<p>trung ca</p>\r\n\r\n<div id=\"eJOY__extension_root\" style=\"all: unset;\">&nbsp;</div>','2020-04-18 07:48:58','2020-04-18 07:48:58');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (56,18,'ngong','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:49:07','2020-04-18 07:49:07');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (57,20,'Nam meo','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:50:47','2020-04-18 07:50:47');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (58,20,'Nam rom','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:53:23','2020-04-18 07:53:23');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (59,20,'Nam dong tien','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:53:30','2020-04-18 07:53:30');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (60,20,'Nam dong co','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:53:35','2020-04-18 07:53:35');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (61,21,'Apple','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:53:58','2020-04-18 07:53:58');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (62,21,'orange','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:54:16','2020-04-18 07:54:16');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (63,21,'kiwi','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:54:25','2020-04-18 07:54:25');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (64,21,'banana','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:54:33','2020-04-18 07:54:33');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (65,21,'watermelon','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:54:44','2020-04-18 07:54:44');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (66,21,'2. green apple','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:55:17','2020-04-18 07:55:17');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (67,21,'peach','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:55:27','2020-04-18 07:55:27');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (68,21,'peach','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:55:38','2020-04-18 07:55:38');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (69,21,'strawberry','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:55:56','2020-04-18 07:55:56');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (70,21,'1pineapple','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:56:06','2020-04-18 07:56:06');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (71,21,'starfruit','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:56:20','2020-04-18 07:56:20');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (72,21,'dragon fruit','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:56:31','2020-04-18 07:56:31');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (73,22,'Cheese','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:56:41','2020-04-18 07:56:41');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (74,22,'Cheese','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:57:27','2020-04-18 07:57:27');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (75,23,'pork','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:57:46','2020-04-18 07:57:46');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (76,24,'pork','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:57:58','2020-04-18 07:57:58');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (77,25,'pork','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:58:03','2020-04-18 07:58:03');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (78,25,'Chicken','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:58:18','2020-04-18 07:58:18');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (79,26,'fish','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:58:26','2020-04-18 07:58:26');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (80,27,'shrimp','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:58:38','2020-04-18 07:58:38');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (81,28,'cuttle','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:58:47','2020-04-18 07:58:47');
+INSERT INTO `` (`id`,`recipeTypes_id`,`nameOfRecipes`,`decription`,`created_at`,`updated_at`) VALUES (82,20,'nam dong co','<p>trung ca</p>\r\n\r\n<div>&nbsp;</div>','2020-04-18 07:59:47','2020-04-18 07:59:47');

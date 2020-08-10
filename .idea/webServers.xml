@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f6a8febc-a1a9-4cf5-a985-0efc49ec93b5" name="webfood" url="http://webfood.com">
+        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/blog" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
